@@ -1,0 +1,9 @@
+project: savantenvs/choc
+target: fuzz-deflate_roundtrip
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-deflate_roundtrip/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_deflate_roundtrip
+    libfuzzer: true
+    timeout: 5

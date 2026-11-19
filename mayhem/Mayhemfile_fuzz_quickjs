@@ -1,0 +1,9 @@
+project: savantenvs/choc
+target: fuzz-quickjs
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-quickjs/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_quickjs
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,1 @@
+var o={}; for (var i=0;i<10;i++) o['k'+i]=i*1.5; o

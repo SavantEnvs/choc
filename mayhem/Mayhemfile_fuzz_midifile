@@ -1,0 +1,9 @@
+project: savantenvs/choc
+target: fuzz-midifile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-midifile/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_midifile
+    libfuzzer: true
+    timeout: 2

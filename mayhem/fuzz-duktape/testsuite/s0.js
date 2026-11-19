@@ -1,0 +1,1 @@
+var a=[1,2,3]; a.map(function(x){return x*2})

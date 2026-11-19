@@ -1,0 +1,9 @@
+project: savantenvs/choc
+target: fuzz-base64_text
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-base64_text/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_base64_text
+    libfuzzer: true
+    timeout: 2

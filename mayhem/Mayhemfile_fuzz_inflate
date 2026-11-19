@@ -1,0 +1,9 @@
+project: savantenvs/choc
+target: fuzz-inflate
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-inflate/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_inflate
+    libfuzzer: true
+    timeout: 2

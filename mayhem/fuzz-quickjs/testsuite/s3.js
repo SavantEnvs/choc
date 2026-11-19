@@ -1,0 +1,1 @@
+JSON.stringify({x:[1,2,3]}) + 'abc'.repeat(3)

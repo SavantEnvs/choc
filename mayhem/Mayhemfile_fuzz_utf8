@@ -1,0 +1,9 @@
+project: savantenvs/choc
+target: fuzz-utf8
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-utf8/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_utf8
+    libfuzzer: true
+    timeout: 2

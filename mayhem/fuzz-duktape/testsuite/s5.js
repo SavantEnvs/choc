@@ -1,0 +1,1 @@
+try { null.x } catch (e) { e.message }

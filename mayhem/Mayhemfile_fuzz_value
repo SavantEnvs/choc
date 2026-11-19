@@ -1,0 +1,9 @@
+project: savantenvs/choc
+target: fuzz-value
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-value/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_value
+    libfuzzer: true
+    timeout: 2
